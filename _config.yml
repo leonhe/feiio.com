@@ -79,7 +79,7 @@ theme: next
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: rsync
-  host: feiio.com
+  host: 104.238.141.219
   port: 22
   user: eiio
   root: /var/www/feiio.com/html/

@@ -34,6 +34,7 @@ highlight_theme: normal
 # MathJax Support
 mathjax:
 
+sider: hide
 
 # Schemes
 scheme: Mist
@@ -52,6 +53,9 @@ toc_list_number: true
 # Use velocity to animate everything.
 use_motion: true
 
+auto_excerpt:
+  enable: true
+  length: 150
 # Fancybox
 fancybox: true
 
