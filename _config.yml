@@ -15,7 +15,9 @@ social:
   github: https://github.com/leonhe
   weibo: http://weibo.com/324636332
   douban: http://www.douban.com/people/Leon86/
-duoshuo_shortname: heyuanfei
+duoshuo:
+	shortname: heyuanfei
+	enable: true
 google_analytics: UA-66653712-1
 jiathis: true
 # URL
