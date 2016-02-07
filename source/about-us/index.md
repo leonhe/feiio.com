@@ -6,7 +6,7 @@ comments: false
 ### About Me
 ----------------------
 
-* ####这里是？
+* #### 这里是？
 记录一些生活的经历还有技术笔记、读书笔记和胡思乱想唠唠叨叨的文字.
 ----------------------
 
@@ -28,5 +28,6 @@ comments: false
 -----------------------
 
 * #### 联系我:
-	QQ: 176153269 Email: [leonhe86@gmail.com]
+	QQ: 176153269 
+    Email: [leonhe86@gmail.com]
 [leonhe86@gmail.com]: mailto:leonhe86@gmail.com
