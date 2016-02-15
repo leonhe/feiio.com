@@ -22,10 +22,11 @@ google_analytics: UA-66653712-1
 jiathis: true
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://feiio.cn
+url: http://feiio.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
+post_asset_folder: true
 
 
 # Directory
