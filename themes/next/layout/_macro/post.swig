@@ -85,7 +85,7 @@
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
                 <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="{{ post.path }}" itemprop="commentsCount"></span>
+                                  <span class="post-comments-count ds-thread-count" data-thread-key="{{ post.path }}" itemprop="commentsCount"></span>
                 </a>
               </span>
             {% elseif theme.disqus_shortname %}
@@ -174,7 +174,18 @@
         {% endif %}
       {% else %}
         {{ post.content }}
-      {% endif  %}
+                      <hr/>
+    <table>
+     <tr>
+     <td><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a></td>
+     <td>
+     本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。
+     </td>
+     </tr>
+     </table>
+
+        {% endif  %}
+
     </div>
 
     <footer class="post-footer">
@@ -211,6 +222,7 @@
         <div class="post-eof"></div>
       {% endif %}
     </footer>
-  </article>
+
+</article>
 
 {% endmacro %}
