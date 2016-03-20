@@ -28,6 +28,9 @@ comments: false
 -----------------------
 
 * #### 联系我:
-	QQ: 176153269 
-    Email: [leonhe86@gmail.com]
+ >Twitter: [@Leonhe]
+ >Github: [Leonhe(eiio)]
+ >QQ: 176153269 &nbsp; &nbsp; Email: [leonhe86@gmail.com]
 [leonhe86@gmail.com]: mailto:leonhe86@gmail.com
+[@Leonhe]:https://twitter.com/leonhe
+[Leonhe(eiio)]:https://github.com/leonhe
