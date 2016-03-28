@@ -12,7 +12,9 @@ comments: false
 
 * #### 我是谁？
   * 手机游戏客户端开发者. 一只萌小猫的主人.
-  * _Coder && Emacs党
+  * _Coder && Emacs党 
+    [Spacemacs](http://spacemacs.org/)
+    >The best editor is neither Emacs nor Vim, it's Emacs and Vim!
   * 使用C/C++、Pythone、ACTIONSCRIPT3.0、PHP编程语言.
 
 -----------------------
