@@ -12,7 +12,7 @@ comments: false
 ----------------------
 
 * #### 我是谁？
-  * 手机游戏客户端开发者. 一只萌小猫的主人.
+  * 游戏客户端开发者. 一只萌小猫的主人.
   * _Coder && Emacs党 
     [Spacemacs](http://spacemacs.org/)
     >The best editor is neither Emacs nor Vim, it's Emacs and Vim!
@@ -20,13 +20,15 @@ comments: false
   
 -----------------------
 * #### 联系我:
- >Twitter: [@Leonhe]
- >Github: [Leonhe(eiio)]
- >QQ: 176153269 &nbsp; &nbsp; Email: [leonhe86@gmail.com]
+  > Twitter: [@Leonhe]
+  > Github: [Leonhe(eiio)]
+  > QQ: 176153269 &nbsp; &nbsp; Email: [leonhe86@gmail.com]
  
- -----------------------
- >My GPG Public Key:[*2048G/1683EE50*](https://sks-keyservers.net/pks/lookup?op=vindex&search=leonhe86%40gmail.com)
- >Key fingerprint = E1F5 2CA1 F87B 0BA7 9435  2778 65F3 7D94 2155 040C
+ ----------------------
+ 
+ #### My GPG:
+ * Public Key:[*2048G/1683EE50*](https://sks-keyservers.net/pks/lookup?op=vindex&search=leonhe86%40gmail.com)
+ * Key fingerprint = E1F5 2CA1 F87B 0BA7 9435  2778 65F3 7D94 2155 040C
 
 [leonhe86@gmail.com]: mailto:leonhe86@gmail.com
 [@Leonhe]:https://twitter.com/leonhe
