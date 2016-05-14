@@ -5,6 +5,7 @@ tags: CentOS7
 categories: 技术工具
 ---
 一直用Shadowsocks的在PC端来进行翻墙,但发现最近手机有翻墙的需求就折腾了下对自己VPS进行PPTP的VPN搭建以下是搭建流程记录,VPS服务器操作系统是CentOS7.0.
+<!--more -->
 ## 安装组件
 先更新下yum源,然后安装'ppp pptpd'两个组件
 ``` shell
