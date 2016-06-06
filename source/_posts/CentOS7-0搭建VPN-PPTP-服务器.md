@@ -8,7 +8,7 @@ categories: 技术工具
 <!--more -->
 ## 安装组件
 先更新下yum源,然后安装'ppp pptpd'两个组件
-{% codeblock "shell" lang:bash %}
+{% codeblock  lang:bash %}
 yum update
 yum install ppp pptpd
 {% endcodeblock %}
@@ -20,16 +20,15 @@ yum install ppp pptpd
 
 ## Firewalld配置
 
-``` shell
-
+{% codeblock lang:bash%}
 firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 0 -i eth0 -p tcp --dport 1723 -j ACCEPT 
 firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 0 -p gre -j ACCEPT 
 firewall-cmd --permanent --direct --add-rule ipv4 filter POSTROUTING 0 -t nat -o eth0 -j MASQUERADE 
 firewall-cmd --permanent --direct --add-rule ipv4 filter FORWARD 0 -i ppp+ -o eth0 -j ACCEPT 
 firewall-cmd --permanent --direct --add-rule ipv4 filter FORWARD 0 -i eth0 -o ppp+ -j ACCEPT
 firewall-cmd --reload
+{% endcodeblock %}
 
-```
 
 ## PPTP服务操作
 - 启动: `systemctl start pptpd`
