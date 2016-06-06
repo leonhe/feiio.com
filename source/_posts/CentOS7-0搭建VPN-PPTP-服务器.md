@@ -8,10 +8,10 @@ categories: 技术工具
 <!--more -->
 ## 安装组件
 先更新下yum源,然后安装'ppp pptpd'两个组件
-``` shell
+{% codeblock "shell" lang:bash %}
 yum update
 yum install ppp pptpd
-```
+{% endcodeblock %}
 ## 配置PPTP组件
 - 编辑/etc/pptpd.conf,搜索localip和remoteip两行去掉前面的注释“#”
 - 编辑/etc/ppp/options/pptpd,搜索"ms-dns"去掉两行前面的注释标识"#",然后修改DNS地址为"8.8.8.8和8.8.4.4"
