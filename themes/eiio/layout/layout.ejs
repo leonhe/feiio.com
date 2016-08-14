@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title><%=config.title%></title>
+    <!-- Bootstrap CSS -->
+    <%- css('css/bootstrap.css',"css/bootstrap.min.css","styles/default.css",'css/main.css') %>
+    <script src="/highlight.pack.js"></script>
+    <script>
+
+      //hljs.configure({useBR: true});
+      hljs.initHighlightingOnLoad();
+    </script>
+  </head>
+  <body>
+	
+    <div class="container">      <!-- Content here -->
+      <nav class="navbar navbar-light bg-faded">
+      <a class="navbar-brand" href="/"><%-config.title%></a>
+      <% if(theme.menu) {%>
+      <ul class="nav navbar-nav">
+	<% for (key in theme.menu){  %>
+	<li class="nav-item <% if( theme.menu[key]+"/index.html"==page.path){ %>active <%}%> ">
+	  	  <a class="nav-link" href="<%- url_for(theme.menu[key]) %>"><%- key.toUpperCase()%> <span class="sr-only">(current)</span></a>
+	</li>
+	<% } %>
+      </ul>
+      <% } %>
+      <form class="form-inline navbar-form pull-right">
+	<input class="form-control" type="text" placeholder="Search">
+	<button class="btn btn-success-outline" type="submit">Search</button>
+      </form>
+    </nav>
+		        <%- body %>
+	      </div>
+    <div class="container footer">
+      <hr/>
+      <p>© <%- theme.sine %> Theme:Leon He</p>
+      </div>
+</div>
+	      
+    <!-- jQuery first, then Bootstrap JS. -->
+    <%- js("js/jquery.min.js","js/bootstrap.js") %>
+    
+  </body>
+  </html>

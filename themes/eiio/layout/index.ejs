@@ -1,0 +1,52 @@
+	      <div class="row">
+		<div class="col-sm-8">
+<div class="card">
+		    <div class="card-header">Posts</div>
+		    		    <div class="card-block">
+
+		<% if (page.posts) { %>
+<ul class="home_list">
+<% page.posts.forEach(function(post){ %>
+   <li class="title_home">
+   <small class="text-muted"><%- date(post.date) %></small>
+<a href="<%- url_for(post.path) %>"><%- post.title%></a></li>
+<% })%>
+<ul>
+<% } %></div>
+</div>
+<!--分页 -->
+		  <nav>	
+		    <ul class="pager">
+				<li class="pager-prev <% if(page.current==1){ %>disabled <% } %>"><a href="/<%- page.prev_link %>"><span aria-hidden="true">&larr;</span>Older</a></li>
+				<li class="pager-next <% if(page.next==0) {%> disabled <% } %>"><a href="/<%- page.next_link %>">Newer<span aria-hidden="true">&rarr;</span></a></li>
+	   		</ul>
+			      </nav>
+		</div>
+		<div class="col-sm-4">
+		  <% if (!is_post()) { %>
+		  <div class="card">
+		    <div class="card-header">About Me </div>
+
+		    <div class="card-block">
+		      <h4 class="card-title">Leon He</h4>
+		      <h6 class="card-subtitle text-muted"><%- config.subtitle %></h6>
+		    </div>
+		    <% if(config.social){%>
+		    <ul class="list-group list-group-flush">
+		    
+<li class="list-group-item"><a targe="_blank" href ="<%- config.social.github %>
+"><img src="/images/github_copyrighted_32px_1169845_easyicon.net.png"/>&nbsp;GitHub</a></li>
+<li class="list-group-item"><a href ="<%- config.social.weibo %>
+"><img src="/images/weibo_39.129973474801px_1193419_easyicon.net.png"/>&nbsp;微博</a></li>
+<li class="list-group-item"><a href ="<%- config.social.douban %>
+"><img src="/images/douban_32px_1193382_easyicon.net.png"/>&nbsp;豆瓣</a></li>
+
+
+		      <% } %>
+	
+		    </ul>
+		  </div>
+		</div>		
+		<% } %>
+
+
