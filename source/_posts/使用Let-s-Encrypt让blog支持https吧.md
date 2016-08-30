@@ -12,24 +12,25 @@ web服务器：Nginx。
 以下就是对blog进行Let's Encrypt https支持的的配置的过程：
 
 ### Let's Encrypt的获取
-``` 
-$ git clone https://github.com/letsencrypt/letsencrypt
-$ cd letsencrypt
-$ ./letsencrypt-auto --nginx or apache
-```
+<pre class="brush: bash; ">
+git clone https://github.com/letsencrypt/letsencrypt
+cd letsencrypt
+./letsencrypt-auto --nginx or apache
+</pre>
 NOTE: 第一次使用自动配置没有成功.
 
 ### 生成网站证书
 
-```
+<pre class="brush: bash; ">
 //如果有多个域名请自行增加 *-d 域名* 参数
 ./letsencrypt-auto certonly --webroot -w 网站的主目录 -d 域名 
 //查看生成证书的目录
 $ls /etc/letsencrypt/live/域名/
-```
-### nginx中的证书配置
+</pre>
 
-```
+### nginx中的证书配置 
+
+<pre clas="brush: bash; ">
 server {
 
 listen 443 ssl;
@@ -39,21 +40,21 @@ root        网站主目录
 ssl_certificate /etc/letsencrypt/live/heyuanfei.cn/fullchain.pem;
 ssl_certificate_key /etc/letsencrypt/live/heyuanfei.cn/privkey.pem;
 ssl on;
-...
 }
 //重新启动服务器
-$ service nginx restart
-```
+service nginx restart
+</pre>
 
-###对HTTP请求的跳转配置
-```
+### 对HTTP请求的跳转配置
+
+<pre class="brush: bash">
 server {
 listen       80 default_server;
 listen       [::]:80 default_server;
 server_name *.feiio.com *.heyuanfei.cn;
 rewrite ^(.*)$ https://$host$1 permanent;
 }
-```
+</pre>
 
 
 

@@ -1,11 +1,18 @@
-
+<script type="text/javascript" src="/highlight/scripts/shCore.js"></script>
+<script type="text/javascript" src="/highlight/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="/highlight/scripts/shBrushBash.js"></script>
+<link type="text/css" rel="stylesheet" href="/highlight/styles/shCoreDefault.css"/>
+<script type="text/javascript">
+SyntaxHighlighter.config.bloggerMode = true;
+SyntaxHighlighter.all();
+</script>
 <div class="card">
     <div class="card-block">
-        <h4 class="card-title"><%- page.title %></h4>
+        <h2 class="card-title"><%- page.title %></h2>
 		        <p class="card-text"><small class="text-muted">发表于<%- date(page.date) %>
 
 <a href=""></a></small></p>
-	    <p class="card-text"><%- markdown(page.content) %></p>
+	    <p class="card-text"><%- page.content %></p>
 		  </div>
 
 		  <table class="table">

@@ -1,7 +1,7 @@
 title: "链接"
 date: 2015-08-02 20:23:56
 ---
-+ Blog
++ 友链
   - [李攀的Blog](http://lipan.me/)
   - [混沌的云](http://blog.zerob13.in/)
 
