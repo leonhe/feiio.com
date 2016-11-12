@@ -1,88 +1,16 @@
-# Hexo Configuration
-## Docs: http://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
-
-# Site
+# Site settings
 title: 阿拉伯的鞋匠
-subtitle: 阅读、生活、思考、技术
-description: 记录一些生活的经历还有技术笔记、读书笔记和胡思乱想唠唠叨叨的文字.
-author: LeonHe
-language: zh-Hans
-timezone: Asia/Chongqing
-
-
-social:
-  github: https://github.com/leonhe
-  weibo: http://weibo.com/324636332
-  douban: http://www.douban.com/people/Leon86/
-duoshuo:
-	shortname: heyuanfei
-	enable: true
-google_analytics: UA-66653712-1
-jiathis: true
-# URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://feiio.com
-root: /
+email: leonhe86@gmail.com
+description: 生活、技术、读书、思考
+url: "http://feiio.com"
 permalink: :year/:month/:day/:title/
-permalink_defaults:
-post_asset_folder: true
+# Build settings
+markdown: kramdown
+keep_files:   [".git", ".svn"]
+encoding:     "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+site.categories: ['php']
 
-
-# Directory
-source_dir: source
-public_dir: public
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
-i18n_dir: :lang
-skip_render:
-
-# Writing
-new_post_name: :title.md # File name of new posts
-default_layout: post
-titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
-filename_case: 0
-render_drafts: false
-post_asset_folder: false
-relative_link: false
-future: true
-highlight:
-  enable: true
-  line_number: true
-  tab_replace: 
-
-# Category & Tag
-default_category: uncategorized
-category_map:
-tag_map:
-
-# Date / Time format
-## Hexo uses Moment.js to parse and display date
-## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
-time_format: HH:mm:ss
-
-# Pagination
-## Set per_page to 0 to disable pagination
-per_page: 20
-pagination_dir: page
-
-# Extensions
-## Plugins: http://hexo.io/plugins/
-## Themes: http://hexo.io/themes/
-theme: eiio
-
-# Deployment
-## Docs: http://hexo.io/docs/deployment.html
-deploy:
-  type: rsync
-  host: 45.32.86.169
-  port: 22
-  user: root
-  root: /var/www/html/
-  delete: true
-  
+gems: [jekyll-paginate,jekyll-gist]
+paginate: 20
+paginate_path: "/page/:num"

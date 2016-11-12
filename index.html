@@ -1,0 +1,51 @@
+---
+layout: default
+---
+      <!--- icon container --->
+    <div class="panel panel-default">
+      <div class="panel-body">
+	<div class="container">
+	  <div class="row">
+	    <div class="col-md-9">
+	      {{site.description}}
+	    </div>
+	   
+	<div class="col-md-3">
+	  
+	  <a target="_blank" href="https://github.com/leonhe&#10;"><img src="/images/github-logo-icon-2.png" width="25px" height="25px">&nbsp;GitHub</a>
+	<a target="_blank" href="{{ "/feed.xml" | prepend: site.baseurl }}"><img src="/images/rss-feed-logo-symbol-icon-10.png" width="25px" height="25px">&nbsp;RSS</a>
+	</div>
+	  </div>
+	  </div>
+      </div>
+    </div>
+<!-- post list --->
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      <span class="glyphicon glyphicon-list-alt"></span>&nbsp;<b>Posts</b>
+    </div>
+    <div class="panel-body">
+      <div class="list-group">
+	{% for post in paginator.posts %}
+	<a href="{{ post.url | prepend: site.baseurl }}" class="list-group-item"> <span class="badge">{{ post.date | date: "%b %-d, %Y" }}</span> {{ post.title }}</a>
+	{% endfor %}
+      </div>
+      <nav>
+	<ul class="pager">
+	  {% if paginator.previous_page %}
+	  <li class="previous"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+>&larr; Older</a></li>
+	  {% else %}
+	  <li class="previous disabled"><a href="#">&larr; Older</a></li>
+	  {% endif %}
+
+	  {% if paginator.next_page %}
+	  <li class="next"><a href="/page/{{ paginator.next_page }}">Newer &rarr;</a></li>
+	  {% else %}
+	  	  <li class="next disabled"><a href="#">Newer &rarr;</a></li>
+	  {% endif %}
+	</ul>
+      </nav>
+    </div>
+    </div>
+    <!--- end post --->

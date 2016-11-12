@@ -1,0 +1,27 @@
+---
+layout: page
+title: Archive
+---
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1">Archive</h2>
+<div class="outline-text-2" id="text-orgheadline1">
+<hr  />
+<h3>All Tags：</h3>
+{% for tag in site.tags %}
+<span class="label label-success">{{ tag[0] }}</span>
+{% endfor %}
+
+{% for category in site.categories %}
+<a name="{{category | first }}">&nbsp;</a>
+<hr/>
+<h3>{{ category | first }} <span class="badge">{{ category | last | size }}</span></h3>
+
+<ul class="arc-list">
+{% for post in category.last %}
+<li>{{ post.date | date:"%Y-%m-%d"}} <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endfor %}
+<hr/>
+</div>
+</div>

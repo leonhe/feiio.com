@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+   <meta charset="utf-8">
+   
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="XN4YmHgE76jTp2kNQ9qnsVSApl6yIQBzdyLe0BnbFks" />
+
+  <title>Emacs org-mode对表格的操作</title>
+  <meta name="description" content="最近在公司需要发布客户端组的每日的工作任务用了一段时间的excle来发布感觉使用也只能做个表格用用如果看历史纪录确实比较繁琐，想来一下是不是可以使用emacs的org-mode来做项目的纪录，并且还能支持远程同步到对应的服务器目录下和发布成pdf和html格式。这里也记下在org-mode中表格的常用操作作个记录：">
+<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/holder.min.js" type='text/javascript'></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="canonical" href="http://localhost:4000/2015/12/11/Emacs_org_mode%E5%AF%B9%E8%A1%A8%E6%A0%BC%E7%9A%84%E6%93%8D%E4%BD%9C/">
+  <link rel="alternate" type="application/rss+xml" title="阿拉伯的鞋匠" href="http://localhost:4000/feed.xml">
+</head>
+
+  <body>
+
+    <header class="navbar navbar-default navbar-fixed-top" id="top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">阿拉伯的鞋匠</a>
+    </div>
+
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+
+      <ul class="nav navbar-nav">
+	<li > <a  href="/">Home</a></li>
+	
+          
+        <li > <a  href="/about/">About Me</a></li>
+          
+          
+          
+        <li > <a  href="/archive/">Archive</a></li>
+          
+          
+          
+          
+          
+          
+          
+        <li > <a  href="/link/">Link</a></li>
+          
+          
+          
+          
+          
+          
+
+      </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+</header>
+
+    
+      <div class="jumbotron masthead" role="main">
+	<div class="row">
+	  <div class="col-md-8 col-md-offset-2">
+	    <div class="container ">
+	        <div class="panel panel-default">
+    <div class="panel-body">
+      <div id="post" >
+	<p><h2 >Emacs org-mode对表格的操作</h2>
+	  <small class="text-muted">
+	    发表于&nbsp;<time datetime="2015-12-11T05:44:53+08:00" itemprop="datePublished">Dec 11, 2015</time>
+	  </small>
+	</p>
+	
+	<p>
+	  
+	  <a href='/archive/#技术工具'><span class="label label-danger">技术工具</span></a>
+	
+	</p>
+	<hr/>
+
+	    <p>最近在公司需要发布客户端组的每日的工作任务用了一段时间的excle来发布感觉使用也只能做个表格用用如果看历史纪录确实比较繁琐，想来一下是不是可以使用emacs的org-mode来做项目的纪录，并且还能支持远程同步到对应的服务器目录下和发布成pdf和html格式。这里也记下在org-mode中表格的常用操作作个记录：
+<!-- more --></p>
+
+<h3 id="section">常用快捷键：</h3>
+
+<pre class="brush: bash;">
+$ C-c #对当前表格对齐和格式化
+$ M-S-left #删除当前列
+$ M-left/right #对当前列进行左移或右移
+$ M-S-up  #删除当前行
+$ M-S-down #当前行的上新建一行
+$ M-up/down #上下移动当前行
+$ M-S-right #在当前列的左侧新建一列
+$ Tab ＃切换光标到下一个表格中
+$ S-Tab #切换光标到上一个表格中
+$ C-c _ 或 |- #对当前行与行之间增加下划线
+$ C-| #新建表格：行x列
+$ C-c RET #当前行的下方插入一行
+</pre>
+
+<h3 id="section-1">相关资料</h3>
+<ul>
+  <li><a href="http://orgmode.org/org.html#Tables">Org Mode Table</a></li>
+  <li><a href="http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-3">Org简明手册</a></li>
+</ul>
+
+	<p class="text-center text-warning"> ---------------> <b>END</b> <--------------- </p>
+											  
+									
+
+		<p><b>tags:</b></a>
+		  
+		  <span class="label label-default">Emacs</span>
+		  </p>
+
+							    
+							    <table class="table">
+     <tbody><tr>
+          <td><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"></a></td>
+	       <td>
+	            本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。
+		         </td>
+			      </tr>
+</tbody></table>
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="2015/12/11/Emacs org-mode对表格的操作/" data-title="Emacs org-mode对表格的操作" data-url="https://feiio.com/2015/12/11/Emacs_org_mode%E5%AF%B9%E8%A1%A8%E6%A0%BC%E7%9A%84%E6%93%8D%E4%BD%9C/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"heyuanfei"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+							    </div>
+  </div>
+
+</div>
+
+      	    </div>
+	  </div>
+	</div>
+      </div>
+      <div class="container footer">
+  <div class="row">
+    <div class="col-md-10">
+      <small class="text-muted">© 2012-2016 <a href="/">feiio.com</a>, all rights reserved &nbsp;&nbsp;version:1.0.1</small>
+    </div>
+    <div class="col-md-2">
+      <small class="text-muted"> 沪ICP备14014318号-2</small>
+      </div>
+   </div>
+ </div>
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-66653712-1', 'auto');
+      ga('send', 'pageview');
+
+   </script>
+
+  </body>
+
+</html>

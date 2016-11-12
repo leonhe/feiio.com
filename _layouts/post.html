@@ -1,0 +1,59 @@
+---
+layout: default
+---
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div id="post" >
+	<p><h2 >{{ page.title }}</h2>
+	  <small class="text-muted">
+	    发表于&nbsp;<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
+	  </small>
+	</p>
+	
+	<p>
+	  {% for category in page.categories %}
+	  <a href='/archive/#{{category}}'><span class="label label-danger">{{ category }}</span></a>
+	{% endfor %}
+	</p>
+	<hr/>
+
+	    {{ content }}
+	<p class="text-center text-warning"> ---------------> <b>END</b> <--------------- </p>
+											  
+									
+{% unless page.tags == empty %}
+		<p><b>tags:</b></a>
+		  {% for tag in page.tags %}
+		  <span class="label label-default">{{ tag }}</span>
+		  {% endfor %}</p>{% endunless %}
+
+							    
+							    <table class="table">
+     <tbody><tr>
+          <td><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"></a></td>
+	       <td>
+	            本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。
+		         </td>
+			      </tr>
+</tbody></table>
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="{{ page.date | date: "%Y/%m/%d" }}/{{page.title}}/" data-title="{{page.title}}" data-url="https://feiio.com{{page.url}}"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"heyuanfei"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+							    </div>
+  </div>
+
+</div>
