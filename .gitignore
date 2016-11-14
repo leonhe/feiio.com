@@ -30,4 +30,4 @@ Thumbs.db
 node_modules/
 public/
 .deploy*/
-
+_site/
