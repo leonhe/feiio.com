@@ -1,0 +1,87 @@
+---
+layout: post
+title: Go的初步尝试
+date: <2016-11-11 Fri>
+categories: [编程技术]
+tags: [Go]
+location: Shanghai.China
+---
+
+<p>
+近两天给朋友写了一个Web小应用，其实需求也是很简单就是在微信上打开一个网页然后点击网页中的一个按钮调用对应硬件的API接口然后线下设备根据对应的API的响应进行操作，经过对需求的衡量和技术上的考虑决定用时下热门的go来写一个小的Web  server应用，这篇文章算是对这次使用go过程的一个总结记录。
+</p>
+
+<p>
+在使用go的过程感受到了它语法的飘逸了，比如：
+</p>
+<ul class="org-ul">
+<li>项目结构的组织，参见：<a href="https://golang.org/doc/code.html">How to Write Go Code</a></li>
+<li><p>
+变量的声明
+</p>
+<div class="org-src-container">
+
+<pre class="src src-go">str:=<span style="color: #CC5542;">"Hello"</span> <span style="color: #6abd50;">//</span><span style="color: #6aaf50;">&#24378;&#28872;&#24314;&#35758;&#29992;&#36825;&#26679;&#31616;&#27905;&#30340;&#20889;&#27861;</span>
+<span style="color: #7d7c61; font-weight: bold;">var</span> i int=1
+</pre>
+</div></li>
+<li><p>
+if条件表达式的写法
+</p>
+<div class="org-src-container">
+
+<pre class="src src-go">str:=<span style="color: #CC5542;">"Hello"</span>
+<span style="color: #7d7c61; font-weight: bold;">if</span> str!=<span style="color: #6a7550;">nil</span>{
+    fmt.<span style="color: #bdbdb3; font-weight: bold;">println</span>(str)
+}
+</pre>
+</div></li>
+<li>语句行的结尾不需要 <b>;</b></li>
+<li><p>
+对函数返回的数据可以这样写
+</p>
+<div class="org-src-container">
+
+<pre class="src src-go"><span style="color: #7d7c61; font-weight: bold;">func</span> <span style="color: #9b55c3;">getName</span>() (name <span style="color: #528fd1;">string</span>){
+   name=<span style="color: #CC5542;">"Go lang"</span>
+   <span style="color: #7d7c61; font-weight: bold;">return</span>
+ }
+</pre>
+</div></li>
+<li><p>
+有的表达式 需要在函数的结尾调用的话，在表达式前加 <b>defer</b> 
+</p>
+<div class="org-src-container">
+
+<pre class="src src-go"><span style="color: #7d7c61; font-weight: bold;">func</span> <span style="color: #9b55c3;">say</span>(){
+     <span style="color: #7d7c61; font-weight: bold;">defer</span> fmt.<span style="color: #9b55c3;">Println</span>(<span style="color: #CC5542;">"Go"</span>)
+     fmt.<span style="color: #9b55c3;">Println</span>(<span style="color: #CC5542;">"Hi"</span>)
+ }
+</pre>
+</div></li>
+<li>简单的几行就能实现一个Web Server，详细的代码见:<a href="https://tour.golang.org">A tour of go</a></li>
+</ul>
+<p>
+但在使用的过程中还是有些不习惯的,比如：
+</p>
+<ul class="org-ul">
+<li>在代码块 <b>{}</b> 的时候，开始的 <b>{</b> 一定要放在结尾，对于我习惯于 <b>{</b> 换一行的人来说在开始简直是噩梦，但习惯习惯就好了.</li>
+<li>对 <b>interface</b> 类型到具体类型的转换</li>
+<li>对声明的变量或导入的库后面没有使用的编译的时候一定会让你编译不过,但这也是go的一个优秀的地方,让这个语言运行的时候更高效了.</li>
+</ul>
+
+<p>
+其实最主要还是长期使用一种语言出现语法差异上的不习惯，习惯习惯就好了，先暂时总结这么多吧，对GO我也还有很多还需要了解的地方，以后在慢慢的写吧！
+</p>
+
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1">参考资料</h2>
+<div class="outline-text-2" id="text-orgheadline1">
+<ul class="org-ul">
+<li><a href="https://tour.golang.org">A Tour of Go</a></li>
+<li><a href="https://golang.org/">Go Lang官网</a>
+     官网应该被GFW了替代 <a href="https://go-zh.org/">Go-Zh</a></li>
+<li><a href="http://studygolang.com/">Go语言中文网</a></li>
+</ul>
+</div>
+</div>
